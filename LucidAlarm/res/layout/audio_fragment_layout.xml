@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout 
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" 	
+	android:orientation="horizontal"
+	>		
+	
+    <LinearLayout
+        android:id="@+id/everything_linearLayout" 
+        android:layout_width="fill_parent"
+    	android:layout_height="fill_parent" 		
+		android:orientation="horizontal"
+        >
+
+    <Chronometer
+        android:id="@+id/chronometer"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_weight="2"
+        android:paddingLeft="10dp"
+        android:textSize="14sp" />
+	
+    <!--  PLAYER BUTTONS BAR  -->
+
+	<LinearLayout
+	    android:layout_width="0dp"
+	    android:layout_height="fill_parent"
+	    android:layout_weight="5"
+	    android:gravity="center_vertical"
+	    android:orientation="horizontal" >
+		
+		<!-- record -->
+		<ImageButton
+            android:id="@+id/recordIcon_imageButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@null"
+            android:src="@drawable/ic_record" />
+        
+       	<!-- play / pause -->
+        <ImageButton
+            android:id="@+id/playIcon_imageButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@null"
+            android:src="@drawable/ic_media_play" />
+
+		<!-- stop -->
+        <ImageButton
+            android:id="@+id/stopIcon_imageButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@null"
+            android:src="@drawable/ic_media_stop" />
+        
+        <!-- 
+        <ImageView 
+	        android:src="@drawable/mic_pic"
+	        android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+	        />  -->
+		    
+	</LinearLayout>	
+	
+	<!--  spacer -->
+	<View
+	    android:layout_width="0dp"
+		android:layout_height="fill_parent"
+		android:layout_weight="1" 
+		/>
+	
+	
+	<!-- ======================================================= -->
+	<!-- SEEK BAR  - when playing audio  -->
+	<!-- ======================================================= -->
+	
+	<RelativeLayout
+	    android:id="@+id/barsAndLabels_relativeLayout"
+	    android:layout_width="0dp"
+	    android:layout_height="fill_parent"
+	    android:layout_weight="4" >
+	    
+		<SeekBar
+	    	android:id="@+id/audioSeekBar"
+	    	android:layout_width="fill_parent"
+	    	android:layout_height="wrap_content"
+	    	android:layout_centerVertical="true"	    		    	
+	    	/>
+	
+	   
+	<!--  OR  -->
+	<!-- ======================================================= -->
+	<!--  SOUND BAR  - when recording audio  -->
+	<!-- ======================================================= -->
+	
+		<RelativeLayout 
+	    	android:id="@+id/soundBar_relativeLayout"
+	    	android:layout_width="fill_parent"
+	    	android:layout_height="wrap_content"
+	    	android:layout_centerVertical="true"
+	    	
+	    	>
+
+	    	<ImageView
+	    	    android:id="@+id/soundBar_imageView"
+	    	    android:layout_width="fill_parent"
+	    	    android:layout_height="wrap_content"
+	    	    android:layout_centerVertical="true"
+	    	    android:scaleType="fitXY"
+	    	    android:src="@drawable/sound_bar" />
+
+	    	<ImageView
+	    	    android:id="@+id/darkBar_imageView"
+	    	    android:layout_width="fill_parent"
+	    	    android:layout_height="wrap_content"
+	    	    android:layout_alignParentRight="true"
+	    	    android:scaleType="fitXY"
+	    	    android:alpha="0.7"
+	    	    android:src="@drawable/black" />
+
+		</RelativeLayout>
+
+	<!-- ======================================================= -->
+	
+		<!--  TIME LABELS -->
+		<RelativeLayout
+		    android:id="@+id/timeLabels_relativeLayout"
+			android:layout_width="fill_parent"
+			android:layout_height="wrap_content"
+			android:layout_below="@+id/audioSeekBar"			
+			>	
+		    <TextView 
+		        android:id="@+id/songCurrentDuration_textView"
+	    	    android:layout_width="wrap_content"
+				android:layout_height="wrap_content" 
+	        	android:layout_alignParentLeft="true"
+	        	/>
+		    
+	    	<TextView 
+	        	android:id="@+id/songTotalDuration_textView"
+	        	android:layout_width="wrap_content"
+				android:layout_height="wrap_content" 
+	        	android:layout_alignParentRight="true"
+	        	/>	
+		 </RelativeLayout>
+	 
+	</RelativeLayout> <!-- close seek bar / sound bar and labels layout -->
+	<!-- ======================================================= -->
+	</LinearLayout><!--  close everything linear layout -->
+	
+	
+	<ImageButton 
+	    android:id="@+id/microphone_imageButton"
+	        	android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:src="@drawable/ic_microphone"
+				android:visibility="gone"
+				
+				/>
+		
+</LinearLayout>

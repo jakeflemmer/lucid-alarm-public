@@ -1,0 +1,62 @@
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <style name="AppTheme" parent="@android:style/Theme.Holo.Light" >
+		<item name="android:windowNoTitle">true</item>
+	</style>	
+	
+	<color name="black_color">#000000</color>
+	<color name="red_color">#ffa500</color>
+	<color name="blue_color">#0000ff</color>
+	<color name="yellow_color">#ffff00</color>
+	<color name="green_color">#00ff00</color>
+	<color name="low_alpha_black">#AA000000</color>
+		
+	<style name="PreferencesTheme">
+		<item name="android:windowBackground">@color/black_color</item>
+		<item name="android:windowNoTitle">true</item>		
+	</style>
+	
+	<style name="scientistTheme">
+		<item name="android:windowBackground">@color/black_color</item>
+		<item name="android:windowNoTitle">true</item>
+		<item name="android:textColor">@color/green_color</item>
+		
+	</style>
+	
+	<style name="zenTheme">
+		<item name="android:windowBackground">@color/black_color</item>
+		<item name="android:windowNoTitle">true</item>
+		<item name="android:textColor">@color/red_color</item>
+		
+	</style>
+	
+	<style name="cloudsTheme" parent="@android:style/Theme.Holo" >
+		<item name="android:windowBackground">@drawable/centered_cloud</item>
+		<item name="android:colorBackgroundCacheHint">#00000000</item>
+		<item name="android:windowNoTitle">true</item>	
+		<item name="android:textColor">@color/red_color</item>
+		<item name="android:textColorSecondary">@color/red_color</item>
+		
+	</style>
+	
+	<style name="spaceTheme" parent="@android:style/Theme.Holo" >
+		<item name="android:windowBackground">@drawable/centered_galaxy</item>
+		<item name="android:colorBackgroundCacheHint">#00000000</item>
+		<item name="android:windowNoTitle">true</item>	
+		<item name="android:textColor">@color/yellow_color</item>
+		<item name="android:textColorSecondary">@color/yellow_color</item>
+		
+		<!-- item name="android:background">@color/low_alpha_black</item>   -->		
+		
+	</style>
+	
+
+		<style name="seekBarStyle" parent="@android:style/Theme.Holo.Light"  >
+	        
+	    
+	    
+	    
+	    
+	</style>
+	
+</resources>

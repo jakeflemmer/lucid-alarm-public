@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout 
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" 	
+	android:orientation="vertical"
+	>
+			
+	<!-- ================================= -->
+    <!--  TOP OPTIONS BAR  -->
+    <!-- ================================= -->
+	<LinearLayout
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content" 		
+		android:orientation="horizontal"
+		>
+		<!--  CREATE NEW RECORD -->	
+		<Button            
+            android:layout_width="0dp"
+			android:layout_weight="3"
+			android:layout_height="wrap_content"
+            android:background="@null"            
+            android:onClick="onCreateNewRecordClick"
+            android:gravity="center"
+            android:drawableBottom="@drawable/ic_menu_compose" 
+            android:textColor="#FFFFFF"
+            android:text="ADD NEW"
+            android:drawablePadding="0dp"
+            android:textSize="12sp"
+            />
+		
+		<!--  EXPORT ALL RECORDS -->	
+		<Button            
+            android:layout_width="0dp"
+			android:layout_weight="3"
+			android:layout_height="wrap_content"
+            android:background="@null"            
+            android:onClick="onExportRecordsClick"
+            android:gravity="center"
+            android:drawableBottom="@drawable/ic_menu_send"
+            android:textColor="#FFFFFF"
+            android:drawablePadding="0dp" 
+            android:text="EXPORT"
+            android:textSize="12sp"
+            />
+		
+		<!--  IMPORT ALL RECORDS -->	
+		<Button            
+            android:layout_width="0dp"
+			android:layout_weight="3"
+			android:layout_height="wrap_content"
+            android:background="@null"            
+            android:onClick="onImportRecordsClick"
+            android:gravity="center"
+            android:drawableBottom="@drawable/ic_import"
+            android:textColor="#FFFFFF" 
+            android:drawablePadding="0dp"
+            android:text="IMPORT"
+            android:textSize="12sp"
+            />
+		
+		
+		<!--  SEARCH FOR DREAMSIGN -->
+		<TextView
+		    android:id="@+id/search_edit_text_label"
+			android:layout_width="0dp"
+			android:layout_weight="3"
+			android:layout_height="wrap_content"			
+			android:text="SEARCH :"
+			android:textAppearance="?android:attr/textAppearanceMedium"
+			android:gravity="center"
+			android:textSize="12sp"
+			/>	
+		
+		<EditText
+		    android:id="@+id/search_edit_text"
+			android:layout_width="0dp"
+			android:layout_weight="3"
+			android:layout_height="wrap_content"
+			android:clickable="true"
+			android:text=""
+			android:textAppearance="?android:attr/textAppearanceMedium"
+			android:gravity="center"
+			android:imeOptions="actionDone"
+			android:singleLine="true"
+			android:textColor="#FFFFFF"
+			/>
+		<ImageView
+     	   android:id="@+id/searchIcon_imageView"
+     	   android:layout_width="0dp"
+		   android:layout_weight="1"
+     	   android:layout_height="wrap_content"
+      	   android:clickable="true"
+      	   android:onClick="onSearchIconClick"
+    	   android:src="@android:drawable/ic_menu_search" />
+	</LinearLayout>	
+	<!-- ================================= -->
+	    
+	    	
+	<!--  spacer -->
+		<View
+		    android:layout_width="1dp"
+		    android:layout_height="45dp"
+		    />
+		
+		<!-- column headings -->
+		
+	<LinearLayout
+			android:layout_width="fill_parent"
+			android:layout_height="wrap_content" 			
+			android:orientation="horizontal"
+			>
+		<TextView
+			android:layout_width="0px"
+			android:layout_height="wrap_content" 
+			android:layout_weight="1"
+			android:text = "Date "
+			android:textAppearance="?android:attr/textAppearanceMedium"
+			android:clickable="true"
+			android:onClick="onDateColumnHeadingClick"
+			/>
+		<TextView
+			android:layout_width="0px"
+			android:layout_height="wrap_content" 
+			android:layout_weight="3"
+			android:text = "Title "
+			android:textAppearance="?android:attr/textAppearanceMedium"
+			android:onClick="onTitleColumnHeadingClick"
+			/>
+	</LinearLayout>	
+		
+	<!--  horizontal dividing line -->
+	<View
+    	android:layout_width="fill_parent"
+   	 android:layout_height="1dip"
+    	android:background="#00AA00" />
+
+		<!--  spacer -->
+		<View
+		    android:layout_width="1dp"
+		    android:layout_height="30dp"
+		    />
+	
+	<ListView 
+   		android:layout_width="match_parent"
+    	android:layout_height="match_parent"
+    	android:id="@+id/listview"
+      	/>
+	
+</LinearLayout>

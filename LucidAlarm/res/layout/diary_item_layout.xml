@@ -1,0 +1,317 @@
+<?xml version="1.0" encoding="utf-8"?>
+	<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+	    android:layout_width="fill_parent"
+    	android:layout_height="fill_parent"
+	    >
+	    
+<RelativeLayout 
+    	android:layout_width="wrap_content"
+    	android:layout_height="wrap_content"		
+		>
+		<!-- android:background="@drawable/planets" -->
+	<!-- THE SPACE BACKGROUND IMAGES -->
+	<ImageView
+        	android:id="@+id/planetImageView"
+        	android:layout_width="fill_parent"
+        	android:layout_height="fill_parent"        	
+        	android:layout_alignParentTop="true"
+        	android:src="@drawable/planets"	
+        	android:scaleType="centerCrop"
+			/>
+	
+	<ImageView
+        	android:id="@+id/spaceRingImageView"
+        	android:layout_width="fill_parent"
+        	android:layout_height="fill_parent"
+        	android:layout_below="@id/planetImageView"        	        	
+        	android:src="@drawable/space_ring"	
+        	android:scaleType="centerCrop"
+			/>
+	
+	<!-- THE CLOUD BACKGROUND IMAGES -->
+	<ImageView
+        	android:id="@+id/clouds4ImageView"
+        	android:layout_width="fill_parent"
+        	android:layout_height="fill_parent"        	
+        	android:layout_alignParentTop="true"
+        	android:src="@drawable/clouds4"	
+        	android:scaleType="centerCrop"
+			/>
+	
+	<ImageView
+        	android:id="@+id/cloudsLakeImageView"
+        	android:layout_width="fill_parent"
+        	android:layout_height="fill_parent"
+        	android:layout_below="@id/clouds4ImageView"        	        	
+        	android:src="@drawable/clouds_lake"	
+        	android:scaleType="centerCrop"
+			/>
+	
+
+	<!-- THE JARVIS BUTTON 
+			a button that shows itself whenever a text field gets focus and calls android speech recognition when clicked 
+				=====================================================
+		<ImageButton
+        	android:id="@+id/jarvisImageButton"
+        	android:layout_width="wrap_content"
+        	android:layout_height="wrap_content"
+        	android:layout_alignParentRight="true"
+        	android:layout_alignParentTop="true"
+        	android:src="@drawable/ic_mic"	
+        	android:visibility="gone"	
+        	android:onClick="onJarvisImageButtonClick"
+			/>		-->
+		
+    <TextView
+        android:id="@+id/dateLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"        
+        android:tag="dateLabel"
+        />
+
+    <TextView
+        android:id="@+id/headingLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/dateLabel"        
+        android:paddingBottom="5dp"
+        android:textAppearance="?android:attr/textAppearanceLarge"        
+        android:text="Dream Diary"
+         />
+
+    <TextView
+        android:id="@+id/titleLabel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/headingLabel"
+        android:text="Title:"
+ 		/>
+
+    <EditText
+        android:id="@+id/titleEditText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/titleLabel"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:background="#FF000000"
+        android:paddingBottom="5dp"
+        android:paddingTop="5dp"
+        android:paddingLeft="5dp"
+         >
+
+    </EditText>
+    
+    <CheckBox
+        android:id="@+id/lucidCheckBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"        
+        android:paddingRight="10dp"
+        android:paddingBottom="5dp"
+        android:paddingTop="5dp"
+        />
+
+    <!-- 
+    		AUDIO FRAGMENT  
+     -->
+
+     <fragment
+         android:id="@+id/audio_fragment"
+         android:name="app.lucidalarm2.AudioFragment"
+         android:layout_width="match_parent"
+         android:layout_height="75dp"
+         android:layout_below="@id/titleEditText"
+         android:layout_marginLeft="10dp"
+         android:layout_marginRight="10dp"
+         android:paddingBottom="5dp"
+         android:paddingTop="20dp" />
+
+    <TextView
+        android:id="@+id/notesLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@id/audio_fragment"
+        android:text="Dream:"
+        />       
+
+    <EditText
+        android:id="@+id/notesEditText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/notesLabel"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"        
+        android:inputType="textMultiLine"
+        android:minLines="10" 
+        android:gravity="top"
+        android:text="New Sound Cue"
+        />
+
+    <TextView
+        android:id="@+id/otherLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/notesEditText"
+        android:text="Other Notes:" />
+
+    <EditText
+        android:id="@+id/otherEditText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/otherLabel"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"        
+        android:inputType="textMultiLine"
+        android:minLines="2" 
+        android:gravity="top"
+        />
+
+    <!-- COLOR RADIO BUTTON GROUP -->
+    
+    <TextView
+        android:id="@+id/radioGroupLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/otherEditText"
+        android:text="Highlight Color:" />
+    
+    <RadioGroup
+        android:id="@+id/colorRadioGroup"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" 
+        android:layout_below="@+id/radioGroupLabel"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="2dp"
+       	android:layout_marginRight="2dp"
+       	android:paddingBottom="25dp"
+        android:paddingTop="25dp"
+        android:orientation="horizontal"
+        
+        >
+ 
+        <RadioButton
+            android:id="@+id/blueRadioButton"
+            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:text="Blue" 
+            android:tag="blue"
+            android:checked="true" 
+            android:paddingLeft="5dp"
+            />
+ 
+        <RadioButton
+            android:id="@+id/redRadioButton"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="Red" 
+            android:tag="red"
+            android:paddingLeft="5dp"
+            />
+        
+        <RadioButton
+            android:id="@+id/greenRadioButton"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="Green" 
+            android:tag="green"
+            android:paddingLeft="5dp"
+            />
+        
+        <RadioButton
+            android:id="@+id/yellowRadioButton"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="Yellow" 
+            android:tag="yellow"
+            android:paddingLeft="5dp"
+            />
+ 
+    </RadioGroup>
+    
+    <!--  GRAPH  -->
+    	
+ 		  <fragment android:name="app.lucidalarm2.GraphFragment"
+              android:id="@+id/graph_activity"
+              android:layout_width="match_parent"
+              android:layout_height="300dp" 
+              android:layout_below="@+id/colorRadioGroup"
+              android:layout_marginLeft="10dp"
+       		 android:layout_marginRight="10dp"
+     		/>
+    
+    <!-- MISCELANEOUS FIELDS -->
+    
+    <TextView
+        android:id="@+id/misc1Label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/graph_activity"
+        android:text="Misc 1:" />
+
+    <EditText
+        android:id="@+id/misc1EditText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/misc1Label"        
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+		/>
+        
+    <TextView
+        android:id="@+id/misc2Label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/misc1EditText"
+        android:text="Misc 2:" />
+
+    <EditText
+        android:id="@+id/misc2EditText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/misc2Label"        
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+		/>
+    
+    <TextView
+        android:id="@+id/misc3Label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/misc2EditText"
+        android:text="Misc 3:" />
+
+    <EditText
+        android:id="@+id/misc3EditText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/misc3Label"        
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+		/>
+    
+    
+</RelativeLayout>
+</ScrollView>

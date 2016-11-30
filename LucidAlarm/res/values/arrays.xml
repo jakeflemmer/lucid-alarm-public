@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="remAlarmSounds">
+		<item name="bell">Bell</item>
+		<item name="despicable">despicable</item>
+	</string-array>
+	
+	
+	
+	<string-array name="remAlarmSoundsValues">
+		<item name="bell">mind</item>
+		<item name="despicable">despicable</item>
+	</string-array>
+	
+	<string-array name="remSelectSoundOptions">
+		<item name="recordNew">Record new sound</item>
+		<item name="selectFromDevice">Select from device library</item>
+	</string-array>
+	<string-array name="remSelectSoundOptionsValues">
+		<item name="recordNew">Record a new sound</item>
+		<item name="selectFromDevice">Select from device library</item>
+	</string-array>
+	
+	<string-array name="remSoundsDelayOptions">
+	   	<item name="noDelay">No delay</item>
+		<item name="15secs">15 seconds</item>
+		<item name="30secs">30 seconds</item>
+		<item name="60secs">60 seconds</item>
+		<item name="180secs">180 seconds</item>
+	</string-array>
+	<string-array name="remSoundsDelayOptionsValues">
+	   	<item name="noDelay">0</item>
+		<item name="15secs">15</item>
+		<item name="30secs">30</item>
+		<item name="60secs">60</item>
+		<item name="180secs">180</item>
+	</string-array>
+	
+	<string-array name="remShapeOptions">
+	   	<item name="increasing">Increasing</item>
+		<item name="intervals">Intervals</item>
+		<item name="oscillating">Oscillating</item>
+	</string-array>
+	<string-array name="remShapeOptionsValues">
+	   	<item name="increasing">increasing</item>
+		<item name="intervals">intervals</item>
+		<item name="oscillating">oscillating</item>
+	</string-array>
+	
+	<string-array name="remIntervalOptions">
+	   	<item name="15mins">15 minutes</item>
+		<item name="30mins">30 minutes</item>
+		<item name="60mins">60 minutes</item>
+		<item name="90mins">90 minutes</item>
+		<item name="120mins">120 minutes</item>
+	</string-array>
+	<string-array name="remIntervalOptionsValues">
+	   	<item name="15mins">15</item>
+		<item name="30mins">30</item>
+		<item name="60mins">60</item>
+		<item name="90mins">90</item>
+		<item name="120mins">120</item>
+	</string-array>
+	
+	<string-array name="remFrequencyOptions">
+	   	<item name="2secs">2 per second</item>
+		<item name="4secs">4 per second</item>
+		<item name="6secs">6 per second</item>
+		<item name="8secs">8 per second</item>
+	</string-array>
+	<string-array name="remFrequencyOptionsValues">
+	   	<item name="2">2</item>
+		<item name="4">4</item>
+		<item name="6">6</item>
+		<item name="8">8</item>
+	</string-array>
+
+	<string-array name="remLightColorOptions">
+	   	<item name="red">red</item>
+		<item name="green">green</item>
+		<item name="blue">blue</item>
+		<item name="white">white</item>
+	</string-array>
+	<string-array name="remLightColorOptionsValues">
+	   	<item name="red">red</item>
+		<item name="green">green</item>
+		<item name="blue">blue</item>
+		<item name="white">white</item>
+	</string-array>
+	
+	<!-- GENERAL SETTINGS  -->
+	
+	<string-array name="themeOptions">	   	
+		<item name="clouds">Clouds</item>
+		<!-- <item name="zen">Zen</item>  -->
+		<item name="space">Space</item>
+	</string-array>
+	<string-array name="themeOptionsValues">	   	
+		<item name="clouds">cloudsTheme</item>
+		<!-- <item name="zen">zenTheme</item>  -->
+		<item name="space">spaceTheme</item>
+	</string-array>
+	
+</resources>

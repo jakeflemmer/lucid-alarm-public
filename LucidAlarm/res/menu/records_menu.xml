@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+          <!-- android:icon="@drawable/ic_new_game"  an important thing for the preferences screen !!-->
+    <item android:id="@+id/import_xml_records"
+          android:title="Import XML Records"
+          android:showAsAction="ifRoom"/>
+    <item android:id="@+id/export_xml_records"
+          android:title="Export XML Records" />
+    <item android:id="@+id/dreamSign_search"
+          android:title="Search for dream signs" />
+</menu>

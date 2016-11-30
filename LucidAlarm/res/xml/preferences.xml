@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:lucidalarm="http://lucidalarm.com"  >
+
+        <PreferenceScreen
+       	 		android:title="Final Alarm Settings" 
+        		android:summary="" 
+        		 >
+    		
+            <PreferenceScreen
+       	 		android:title="Select Final Alarm Sound" 
+        		android:summary="" 
+        		android:key = "selectFinalSound_screen" >
+        		<intent android:action=".AlarmSoundSettingsActivity" >
+        		    <extra android:name="callingContext" android:value="final" />
+        		</intent>
+    		</PreferenceScreen>
+    		
+            <app.lucidalarm2.SeekBarPreference
+	    	    android:title="Maximum volume"
+	        	android:key="finalMaxVolume_preference"
+        		android:defaultValue="100"
+        		android:max="100"
+        		lucidalarm:unitsRight="%"
+        		lucidalarm:min="0"
+        		/>
+    	
+			<app.lucidalarm2.SeekBarPreference
+	    	    android:title="Minutes of snooze"
+	        	android:key="snoozeMinutes_preference"
+        		android:defaultValue="3"
+        		android:max="30"
+        		lucidalarm:unitsRight="mins"
+        		lucidalarm:min="0"
+        		/>
+	    
+	    	<app.lucidalarm2.SeekBarPreference
+	    	    android:title="Minutes to max volume"
+	        	android:key="minutesToFinalMaxVolume_preference"
+        		android:defaultValue="3"
+        		android:max="30"
+        		lucidalarm:unitsRight="mins"
+        		lucidalarm:min="0"
+        		/>
+	    </PreferenceScreen>
+	    
+		<PreferenceScreen
+       	 	android:title="REM Alarm Settings" 
+        	android:summary="">
+        	<intent android:action=".CueSettingsActivity"/>
+    	</PreferenceScreen>
+	
+		<PreferenceScreen
+       	 	android:title="General Settings" 
+        	android:summary="">
+        	<intent android:action=".GeneralSettingsActivity"/>
+    	</PreferenceScreen>
+
+	</PreferenceScreen>

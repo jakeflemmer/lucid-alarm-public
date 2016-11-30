@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" 		
+	>		
+	
+    
+   <!-- 
+    		AUDIO FRAGMENT 
+     -->
+     <fragment 
+         android:name="app.lucidalarm2.AudioFragment"
+         android:id="@+id/audio_fragment"
+         android:layout_width="fill_parent"
+         android:layout_height="75dp"          
+         android:layout_marginLeft="10dp"
+       	 android:layout_marginRight="10dp"
+       	 android:layout_centerVertical="true"
+         />
+	
+
+	<!-- ======================================================= -->
+		
+	<!--  horizontal dividing line -->
+	<View
+    	android:layout_width="fill_parent"
+   	 	android:layout_height="1dip"
+    	android:background="#00AA00" 
+    	
+    	/>
+
+	
+	<!--  SOUND NAME EDIT TEXT WHEN COMING FROM RECORD NEW ALARM SOUND -->
+
+	<LinearLayout
+	    android:id="@+id/soundName_linearLayout"
+	    android:layout_width="fill_parent"
+	    android:layout_height="wrap_content"	    	    
+	    android:orientation="horizontal" 
+	    android:layout_centerHorizontal="true"
+	    android:layout_below="@+id/audio_fragment"
+	    >
+
+	    <TextView
+	        android:layout_width="0dp"
+	        android:layout_height="wrap_content"
+	        android:layout_weight="1"
+	        android:text="Save As:" />
+
+	    <EditText
+	        android:id="@+id/saveAs_editText"
+	        android:layout_width="0dp"
+	        android:layout_height="wrap_content"
+	        android:layout_weight="3" 
+	        android:text="New Sound Recording"
+	        >
+
+	        <requestFocus />
+	    </EditText>
+	</LinearLayout>
+	
+</RelativeLayout>

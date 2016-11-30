@@ -1,0 +1,318 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000000" >
+    
+    <!--  WEB VIEW -->
+    
+    <WebView
+        android:id="@+id/webView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+    
+    <!--  NOTE IN ALL THEMES EVERYTHING BELOW IS HIDDEN AND THE WEB VIEW DISPLAYS EVERYTHING -->
+
+    <!--  DIGITAL CLOCK -->
+    
+    <DigitalClock
+        android:id="@+id/digitalClock1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:textSize="60sp" />
+
+    <!--  FINAL ALARM TIME CLOCK -->
+    <TextView
+        android:id="@+id/finalAlarmTime_textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/digitalClock1"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:clickable="true"
+        android:onClick="onFinalAlarmTextViewClick"
+        android:text="@string/final_alarm_time_label"
+        android:textAppearance="?android:attr/textAppearanceMedium"        
+        android:textSize="20sp" />
+    
+    		<!--  FINAL ALARM TIME SETTINGS ICON -->
+    		<ImageButton
+            	android:id="@+id/finalAlarmSettingsIcon_imageButton"
+            	android:layout_width="wrap_content"
+            	android:layout_height="wrap_content"
+            	android:background="@null"
+            	android:onClick="onSettingsButtonClick"
+            	android:layout_toRightOf="@id/finalAlarmTime_textView"
+            	android:layout_alignBottom="@+id/finalAlarmTime_textView"
+            	android:src="@drawable/ic_settings" />
+    
+    
+    <!--  REM ALARM TIME CLOCK -->
+    <TextView
+        android:id="@+id/remAlarmTime_textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_below="@+id/finalAlarmTime_textView"
+        android:layout_centerHorizontal="true"
+        android:clickable="true"
+        android:onClick="onREMAlarmTextViewClick"
+        android:text="@string/rem_alarm_time_label"
+        android:textAppearance="?android:attr/textAppearanceMedium"        
+         />
+    
+    		<!--  REM ALARM TIME SETTINGS ICON -->
+    		<ImageButton
+            	android:id="@+id/remAlarmSettingsIcon_imageButton"
+            	android:layout_width="wrap_content"
+            	android:layout_height="wrap_content"
+            	android:background="@null"
+            	android:onClick="onRemAlarmSettingsButtonClick"
+            	android:layout_toRightOf="@id/remAlarmTime_textView"
+            	android:layout_alignBottom="@+id/remAlarmTime_textView"
+            	android:src="@drawable/ic_settings" />
+
+    <Button
+        android:id="@+id/stop_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:background="#AA0000"
+        android:onClick="onStopButtonClicked"
+        android:text="Stop"
+        android:visibility="invisible" />
+
+    <!--  POWER ICONS -->
+    	<ImageView
+     	   android:id="@+id/finalAlarmPowerIcon_imageView"
+     	   android:layout_width="wrap_content"
+     	   android:layout_height="wrap_content"
+           android:layout_alignBottom="@+id/finalAlarmTime_textView"
+           android:layout_toLeftOf="@+id/finalAlarmTime_textView"
+      	   android:clickable="true"
+      	   android:onClick="onFinalAlarmPowerIconClick"
+    	   android:src="@drawable/ic_power" />
+
+  	  <ImageView
+  	      android:id="@+id/remAlarmPowerIcon_imageView"
+  	      android:layout_width="wrap_content"
+  	      android:layout_height="wrap_content"
+  	      android:layout_alignBottom="@+id/remAlarmTime_textView"
+  	      android:layout_toLeftOf="@+id/remAlarmTime_textView"
+  	      android:clickable="true"
+  	      android:onClick="onRemAlarmPowerIconClick"
+  	      android:src="@drawable/ic_power" />
+
+     <!-- =============================================== -->
+    <!-- ICONS ON THE SIDE PANEL  -->
+    <!-- =============================================== -->
+	
+    <LinearLayout
+        android:id="@+id/icons_linearLayout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:orientation = "horizontal" 
+       >
+
+        <ImageButton
+            android:id="@+id/alarmIcon_imageView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@null"
+            android:onClick="onAlarmIconClick"
+            android:src="@drawable/ic_audio_alarm" />
+        
+         <ImageButton
+            android:id="@+id/loadIcon_imageButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@null"
+            android:clickable="true"
+            android:onClick="onLoadIconClick"
+            android:src="@android:drawable/ic_menu_save" />            
+
+        <!-- ImageButton
+            android:id="@+id/graphIcon_imageButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@null"
+            android:onClick="onGraphIconClick"
+            android:src="@drawable/ic_graph" /-->
+
+        <ImageButton
+            android:id="@+id/settingsIcon_imageButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@null"
+            android:onClick="onSettingsButtonClick"
+            android:src="@android:drawable/ic_menu_preferences" />            
+
+        <ImageButton
+            android:id="@+id/infoIcon_imageButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@null"
+			android:onClick="onInfoIconClick"
+			android:src="@android:drawable/ic_menu_info_details" />            
+
+    </LinearLayout>
+
+    <!-- SNOOZE / DELAY / RESET / DISMISS BUTTONS -->
+	<!-- ========================= -->
+	
+	 <!--  Button
+        android:id="@+id/delayRem_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_above="@+id/alternateClock_digitalClock"
+        android:alpha="1"
+        android:background="#45c14e"
+        android:onClick="onDelayREMButtonClicked"                
+        android:visibility="visible" /> -->
+	
+    <Button
+        android:id="@+id/resetRem_button"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:alpha="1"
+        android:background="#29702e"
+        android:onClick="onResetREMButtonClicked"
+        android:text="SNOOZE"
+        android:textSize="50dp"
+        android:visibility="visible" />
+
+    <!--  =========================================================  -->
+    <!-- FINAL  ALARM PLAYING -->
+	<!--  =========================================================  -->
+    
+    <Button
+        android:id="@+id/snooze_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:layout_above="@+id/dismiss_button"
+        android:alpha="1"
+        android:background="#ff702e"
+        android:onClick="onSnoozeButtonClicked"
+        android:text="SNOOZE"
+        android:textSize="50dp"
+        android:visibility="visible" />
+    
+    <Button
+        android:id="@+id/dismiss_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentBottom="true"
+        android:alpha="1"
+        android:background="#45c14e"
+        android:onClick="onDismissButtonClicked"
+        android:text="DISMISS"
+        android:textSize="50dp"
+        android:visibility="visible" />
+	<!-- android:layout_above="@+id/alternateClock_digitalClock" -->
+    
+    <!-- ============================================================ -->
+     <!--  BOTTOM DISPLAY PANEL DURING REM ALARM PLAY -->
+    <!-- ============================================================ -->
+    
+	<DigitalClock
+        android:id="@+id/alternateClock_digitalClock"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"        
+        android:textSize="50dp"
+        />
+	
+	<ImageView 
+	    android:id="@+id/brightnessIcon_imageView"
+	    android:layout_height="wrap_content"
+		android:layout_width="wrap_content"
+		android:layout_alignParentBottom="true"
+		android:layout_toLeftOf="@+id/brightness_textView"
+		android:src="@drawable/ic_brightness" 
+		/>
+	
+	<TextView
+        android:id="@+id/brightness_textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerVertical="true"
+        android:text="Brightness"
+        android:textAppearance="?android:attr/textAppearanceLarge"        
+        android:textSize="32dp"
+        />
+	
+	<ImageView 
+	    android:id="@+id/volumeIcon_imageView"
+	    android:layout_height="wrap_content"
+		android:layout_width="wrap_content"
+		android:layout_alignParentBottom="true"
+		android:layout_toLeftOf="@+id/volume_textView"
+		android:src="@drawable/volume_icon" 
+		/>
+	
+	<TextView
+        android:id="@+id/volume_textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:text="Vol"
+        android:textAppearance="?android:attr/textAppearanceLarge"        
+        android:textSize="32dp"
+        />
+	
+	<!-- ============================================================ -->
+	<!-- FLASHING LIGHTS  -->
+	<!-- ============================================================ -->
+	
+	<!--  we are descoping the below button -->
+    <!-- Button
+        android:id="@+id/smallFlashing_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentLeft="true"
+        android:layout_above="@+id/alternateClock_digitalClock"
+        android:alpha="1"
+        android:background="#45c14e"
+        android:onClick="onSmallFlashingLightButtonClick"
+        android:text="DELAY"
+        android:textSize="50dp"
+        android:visibility="invisible" /> -->
+	
+	<Button
+        android:id="@+id/bigFlashing_button"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentBottom="true"        
+        android:alpha="1"
+        android:background="#ff702e"
+        android:onClick="onBigFlashingLightButtonClick"                
+        android:visibility="invisible" />
+	
+	
+	
+
+</RelativeLayout>

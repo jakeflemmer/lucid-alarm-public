@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" 
+    android:title="Alarm Sound Settings"
+        android:summary="classicalarmBooya" 
+        >
+    
+    	<!-- DISPLAY CURRENTLY SELECTED SOUND ( non editable ) -->
+		<Preference
+	    	android:title="Currently Selected Sound"
+	        android:key="selectedAlarmSound_preference"
+        	android:defaultValue="classicalarm"
+			android:summary="classicalarm"
+			/>  
+			 
+			<!--  SELECT SOUND OPTIONS -->
+		
+	
+	    	<!-- RECORD NEW -->
+	    	<PreferenceCategory
+                android:title="">
+				<PreferenceScreen
+       	 			android:title="Record new sound" 
+        			android:summary="">
+        			<intent android:action=".AudioActivity" >
+        		   		 <extra android:name="intentStringMessage" android:value="newRemSound" />
+        			</intent>
+    			</PreferenceScreen>
+			</PreferenceCategory>
+	    	
+	    	<!-- SELECT FROM DEVICE-->
+	    	<Preference
+	    	    android:title="Select from device"
+        		android:key="selectFromDevice_preference"
+        		android:defaultValue="" 
+        		/>
+	    	
+	    	
+	    	<!-- SELECT FROM PRERECORDED -->
+	    	<app.lucidalarm2.SoundsTesterListPreference
+	    	    android:title="Select from Pre-recorded"
+				android:key="preRecordedSoundsList_preference"
+				android:defaultValue="classicalarm"
+				android:entries="@array/remSelectSoundOptions"
+				android:entryValues="@array/remSelectSoundOptionsValues"
+				/> 
+			
+	    	<!-- NATURE SOUNDS -->	
+	    	<app.lucidalarm2.SoundsTesterListPreference
+	    	    android:title="Nature Sounds"
+				android:key="natureSoundsList_preference"
+				android:defaultValue="classicalarm"
+				android:entries="@array/remSelectSoundOptions"
+				android:entryValues="@array/remSelectSoundOptionsValues"
+				/> 
+			
+	    	<!-- ISOCHRONIC TONES -->	
+	    	<app.lucidalarm2.SoundsTesterListPreference
+	    	    android:title="Isochronic/Binaural"
+				android:key="isochronicBinauralSoundsList_preference"
+				android:defaultValue="classicalarm"
+				android:entries="@array/remSelectSoundOptions"
+				android:entryValues="@array/remSelectSoundOptionsValues"
+				/> 
+			
+	    	<!-- BINAURAL BEATS
+	    	<app.lucidalarm2.SoundsTesterListPreference
+	    	    android:title="Binaural Beats"
+				android:key="binauralSoundsList_preference"
+				android:defaultValue="classicalarm"
+				android:entries="@array/remSelectSoundOptions"
+				android:entryValues="@array/remSelectSoundOptionsValues"
+				/>  -->	
+				
+	
+</PreferenceScreen>
+    

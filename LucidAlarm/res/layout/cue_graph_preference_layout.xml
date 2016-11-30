@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+     >
+    
+    <!-- 
+    <EditText android:text="wagwan"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:editable = "false"
+        />
+         -->
+   
+    <fragment
+ 		      android:id="@+id/cue_settings_graph_fragment"
+ 		      android:name="app.lucidalarm2.GraphFragment"
+ 		      android:layout_width="fill_parent"
+ 		      android:layout_height="fill_parent"
+ 		      android:layout_marginLeft="10dp"
+ 		      android:layout_marginRight="10dp" />
+ 		    
+    
+ </RelativeLayout>
+   

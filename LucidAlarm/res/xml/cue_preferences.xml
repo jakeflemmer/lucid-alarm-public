@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" 
+    	xmlns:lucidalarm="http://lucidalarm.com" 
+        android:title="REM Alarm Settings"
+        android:summary="">
+    
+		
+		<!-- =================================================================================== -->
+		<!-- 					SOUND CUES								 -->
+		<!-- =================================================================================== -->
+				 
+		<PreferenceCategory
+                android:title="Sound Cues"
+                android:key="sound_category">                
+    
+	 		<!-- CheckBoxPreference 
+    			android:key="remSoundOn_preference"
+    			android:title="Sound On" 
+    			android:defaultValue="true"
+    			/>   -->
+	 		
+	 		<app.lucidalarm2.SwitchPreferenceFixed 
+    			android:key="remSoundOn_preference"
+    			android:title="Sound On" 
+    			android:defaultValue="true"
+    			
+    			/>
+	    
+	 		<PreferenceScreen
+       	 			android:title="Select REM Alarm Sound" 
+        			android:summary=""
+        			android:key="selectRemSound_screen">
+        			<intent android:action=".AlarmSoundSettingsActivity" >
+        		   		 <extra android:name="callingContext" android:value="rem" />
+        			</intent>
+    		</PreferenceScreen>
+	    	
+	    	
+	    	<!-- <ListPreference
+	    	    android:title="Shape"
+				android:key="remShape_preference"
+				android:defaultValue="increasing"
+				android:entries="@array/remShapeOptions"
+				android:entryValues="@array/remShapeOptionsValues"
+				/>   -->
+	    	
+	    	<!--  only visible if 'intervals' is selcted as the shape -->
+	    	<app.lucidalarm2.SeekBarPreference
+	    	    android:title="Interval minutes"
+	        	android:key="remInterval_preference"
+        		android:defaultValue="90"
+        		android:max="300"
+        		lucidalarm:unitsRight="mins"
+        		lucidalarm:min="3"
+        		/>
+	    	
+	    	<app.lucidalarm2.SeekBarPreference
+	    	    android:title="Minutes of snooze"
+	        	android:key="remSeriesDelay_preference"
+        		android:defaultValue="50"
+        		android:max="90"
+        		lucidalarm:unitsRight="mins"
+        		lucidalarm:min="3"
+        		/>
+	    	    
+	    	<app.lucidalarm2.SeekBarPreference
+	    	    android:title="Minutes to max volume"
+	        	android:key="minutesToRemMaxVolume_preference"
+        		android:defaultValue="30"
+        		android:max="90"
+        		lucidalarm:unitsRight="mins"
+        		lucidalarm:min="2"
+        		/>
+	    
+	    	<app.lucidalarm2.SeekBarPreference
+	    	    android:title="Minimum volume"
+	        	android:key="remMinVolume_preference"
+        		android:defaultValue="0"
+        		android:max="100"
+        		lucidalarm:unitsRight="%"
+        		lucidalarm:min="0"
+        		/>
+				
+	    	<app.lucidalarm2.SeekBarPreference
+	    	    android:title="Maximum volume"
+	        	android:key="remMaxVolume_preference"
+        		android:defaultValue="100"
+        		android:max="100"
+        		lucidalarm:unitsRight="%"
+        		lucidalarm:min="0"
+        		/>
+	    		
+	    	<app.lucidalarm2.SeekBarPreference
+	    	    android:title="Delay between sounds"
+	        	android:key="remSoundsDelay_preference"
+        		android:defaultValue="0"
+        		android:max="300"
+        		lucidalarm:unitsRight="seconds"
+        		lucidalarm:min="0"
+        		/>
+	
+	</PreferenceCategory>
+	
+		<!-- =================================================================================== -->
+		<!-- 					LIGHT CUES								 -->
+		<!-- =================================================================================== -->
+		
+	<PreferenceCategory
+                android:title="Light Cues"
+                android:key="light_category">          
+                
+	    	<app.lucidalarm2.SwitchPreferenceFixed 
+    			android:key="remLightOn_preference"
+    			android:title="Light On" 
+    			android:defaultValue="true"
+    			/>
+	    	
+	    	<app.lucidalarm2.SeekBarPreference
+	    	    android:title="Maximum brightness"
+	        	android:key="remMaxBrightness_preference"
+        		android:defaultValue="100"
+        		android:max="100"
+        		lucidalarm:unitsRight="%"
+        		lucidalarm:min="0"
+        		/>
+	    	
+	    	<app.lucidalarm2.SeekBarPreference
+	    	    android:title="Flash Frequency"
+	        	android:key="remFrequency_preference"
+        		android:defaultValue="5"
+        		android:max="10"
+        		lucidalarm:unitsRight="/sec"
+        		lucidalarm:min="1"
+        		/>
+	    	 	
+	    	<ListPreference
+	    	    android:title="Color"
+				android:key="remLightColor_preference"
+				android:defaultValue="white"
+				android:entries="@array/remLightColorOptions"
+				android:entryValues="@array/remLightColorOptionsValues"
+				/>
+                
+	 </PreferenceCategory>
+	 
+		<!-- =================================================================================== -->
+		<!-- 					OTHER OPTIONS								 -->
+		<!-- =================================================================================== -->
+		
+		<PreferenceCategory
+                android:title="Other Options"
+                android:key="otherRemOptions_category">                
+                
+			<CheckBoxPreference 
+	    		android:key="remStartFinalAlarmAfterSnoozeRemAlarm_preference"
+	    		android:title="Start the Final Alarm after Snoozing REM Alarm"
+	    		android:defaultValue="false"
+	    		/>
+		
+		</PreferenceCategory>
+		
+		
+		<!-- =================================================================================== -->
+		<!-- 					THE AMAZING BEAUTIFUL GRAPH 								 -->
+		<!-- =================================================================================== -->
+		
+		<!-- Sadly we are having to put this on the back burner because it is getting orphaned and there
+				is no way to tell it to redraw itself on settings changed :'(
+		<app.lucidalarm2.CueGraphPreference
+		    	android:id="@+id/cueGraph_preference"
+    	    	android:title="Graph Of REM Cues"
+	        	android:key="remCueGraph_preference"
+        		android:defaultValue="90"
+        		android:layout_height="600dp"
+        		android:layout_width="fill_parent"
+        		/>
+				 -->
+				 
+</PreferenceScreen>
+    

@@ -1,0 +1,159 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="app.lucidalarm2"
+    android:versionCode="2"
+    android:versionName="1.1" >
+
+    <uses-sdk
+        android:minSdkVersion="14" 
+        android:targetSdkVersion="22" />
+
+    <uses-permission android:name="android.permission.WAKE_LOCK" >
+    </uses-permission>
+	
+	<uses-permission android:name="android.permission.DISABLE_KEYGUARD" >
+    </uses-permission>
+	
+	<uses-permission android:name="android.permission.WRITE_SETTINGS" >
+    </uses-permission>
+	
+	<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+	<uses-permission android:name="android.permission.RECORD_AUDIO" />
+	
+    <application
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@android:style/Theme.Light.NoTitleBar"
+        android:allowBackup="true"
+		>
+        <activity
+            android:name=".MainActivity"
+            android:label="@string/app_name" 
+            android:launchMode="singleTask"
+            >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <receiver android:name="REMAlarmBroadcastReceiver" >
+        </receiver>
+        <receiver android:name="FinalAlarmBroadcastReceiver" >
+        </receiver>
+
+        <service android:name="FinalAlarmPlayerService" />
+        <service android:name="REMAlarmPlayerService"/>
+
+        <activity 
+            android:name=".SettingsActivity"
+            android:label="@string/title_activity_settings" 
+			android:theme="@style/PreferencesTheme"
+			>
+        </activity>
+        
+        <activity 
+            android:name=".CueSettingsActivity"
+            android:label="@string/title_activity_settings" 
+			android:theme="@style/PreferencesTheme"
+			>
+            <intent-filter>
+           		<action android:name=".CueSettingsActivity" />
+           		<category android:name="android.intent.category.DEFAULT" />
+       		</intent-filter>
+        </activity>
+        
+        <activity 
+            android:name=".AlarmSoundSettingsActivity"
+            android:label="@string/title_activity_settings" 
+			android:theme="@style/PreferencesTheme"
+			>
+            <intent-filter>
+           		<action android:name=".AlarmSoundSettingsActivity" />
+           		<category android:name="android.intent.category.DEFAULT" />
+       		</intent-filter>
+        </activity>
+        
+        <activity 
+            android:name=".GeneralSettingsActivity"
+            android:label="@string/title_activity_settings" 
+			android:theme="@style/PreferencesTheme"
+			>
+            <intent-filter>
+           		<action android:name=".GeneralSettingsActivity" />
+           		<category android:name="android.intent.category.DEFAULT" />
+       		</intent-filter>
+        </activity>
+		
+		<activity
+            android:name=".GraphActivity"
+            android:label="@string/title_activity_graph" >
+        </activity>
+		
+		<activity
+            android:name=".LoadDreamRecordsActivity"
+            android:label="@string/title_activity_notes" >
+        </activity>
+        
+		<activity
+            android:name=".ImportDreamRecordsActivity"
+            android:label="@string/title_activity_notes" >
+        </activity>
+        
+		<activity
+            android:name=".ExportDreamRecordsActivity"
+            android:label="@string/title_activity_notes" >
+        </activity>
+		
+		<activity
+            android:name=".RecordsActivity"
+            android:label="@string/title_activity_notes" >
+        </activity>
+		
+		<activity
+            android:name=".DiaryActivity"
+            android:label="@string/title_activity_notes" >
+        </activity>
+        
+		<activity android:name=".CueGraphActivity" 
+              android:label="@string/title_activity_notes" >
+        	<intent-filter>
+           		<action android:name=".CueGraphActivity" />
+           		<category android:name="android.intent.category.DEFAULT" />
+       		</intent-filter>
+    	</activity>
+    
+		<!-- activity
+            android:name=".CueGraphActivity"
+            android:label="@string/title_activity_notes" >
+        </activity>  -->
+        
+		<activity
+            android:name=".SaveDreamRecordsActivity"
+            android:label="@string/title_activity_notes" >
+        </activity>
+		
+		<activity
+            android:name=".AudioActivity"
+            android:label="@string/title_activity_audio" 
+			android:configChanges="keyboardHidden|orientation|screenSize"
+			>
+        	<intent-filter>
+           		<action android:name=".AudioActivity" />
+           		<category android:name="android.intent.category.DEFAULT" />
+       		</intent-filter>
+        </activity>
+		
+		<activity
+            android:name=".InfoActivity"
+            android:label="@string/title_activity_main" >
+        </activity>
+        
+		  <provider
+            android:name="app.lucidalarm2.ContentProviderLA"
+            android:authorities="app.lucidalarm2.contentproviderla"
+            android:exported="false" />
+		
+    </application>
+
+</manifest>

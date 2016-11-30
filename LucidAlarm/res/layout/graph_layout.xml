@@ -1,0 +1,87 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000000"
+    android:color="#000000" >
+
+    <!--  maybe not the big top margin   -->
+        <!--  android:layout_marginTop="60dp"  -->	
+        
+     <TextView
+        android:id="@+id/graphTitle_textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:gravity="center_horizontal"
+        android:text="Graph of REM alarm cues"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        /> 
+     
+     <ImageButton
+        android:id="@+id/refreshGraph_imageButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"                
+        android:src="@drawable/ic_refresh"
+        android:clickable="true"        
+        android:onClick="onRefreshGraphClick"
+        />
+     
+    <LinearLayout
+        android:id="@+id/graph_linearLayout"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_alignParentLeft="true"        
+		android:orientation="vertical"			
+		android:layout_below="@+id/graphTitle_textView"
+		>
+    </LinearLayout>
+ 
+    
+
+     <!-- ImageButton
+        android:id="@+id/loadGraph_imageButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:clickable="true"
+        android:onClick="onLoadGraphButtonClick"
+		android:background="@null"
+        android:src="@drawable/ic_load" />   
+
+    <TextView
+        android:id="@+id/graphSound_textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/graphTitle_textView"
+        android:text="Sound :"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="#00aa00" />
+
+    <ImageButton
+        android:id="@+id/graphNotes_imageButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_toLeftOf="@+id/loadGraph_imageButton"
+        android:clickable="true"
+        android:onClick="onGraphNotesButtonClick"
+		android:background="@null"
+        android:src="@drawable/ic_notes" />
+
+    <TextView
+        android:id="@+id/graphLucidityScale_textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/graphSound_textView"
+        android:text="Lucidity :"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="#00aa00" />     -->
+ -->
+</RelativeLayout>
